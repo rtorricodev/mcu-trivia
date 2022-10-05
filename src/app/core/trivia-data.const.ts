@@ -1,4 +1,4 @@
-export const triviaData =  [
+export const triviaQuestions =  [
     {
         displayQuestion: "How many Infinity Stones are there ?",
         options: [
@@ -222,7 +222,7 @@ export const triviaData =  [
             "Physics",
             "No one"
         ],
-        indexOfCorrectAnswer: 2,
+        indexOfCorrectAnswer: 0,
     },
     {
         displayQuestion: "What species is Groot ? ",

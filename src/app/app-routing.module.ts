@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { GameOverPageComponent } from './game-over-page/game-over-page.component';
+import { GameOverPageComponent } from './pages/game-over-page/game-over-page.component';
 import { NgModule } from '@angular/core';
-import { StartPageComponent } from './start-page/start-page.component';
-import { TriviaPageComponent } from './trivia-page/trivia-page.component';
+import { StartPageComponent } from './pages/start-page/start-page.component';
+import { TriviaPageComponent } from './pages/trivia-page/trivia-page.component';
 
 const routes: Routes = [
   {
