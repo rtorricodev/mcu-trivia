@@ -1,6 +1,6 @@
 # McuTrivia
 
-##Previous Diagrams
+## Previous Diagrams
 
 <img width="669" alt="Screen Shot 2022-10-05 at 12 10 22" src="https://user-images.githubusercontent.com/11529293/194109451-3554cba5-c5c5-42e6-b295-24b09d08e1a0.png">
 
