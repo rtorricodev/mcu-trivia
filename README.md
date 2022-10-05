@@ -6,7 +6,7 @@
 
 ## Demo
 
-Deployed: [Deployed in Firebase hosting]: https://mcu-trivia-fad25.web.app/trivia
+Deployed: [Deployed in Firebase hosting]: https://mcu-trivia-fad25.web.app
 
 Video Demo: [Loom video]: https://www.loom.com/share/41efde413d5f403f8b52ba4dfb09e2e9 
 
