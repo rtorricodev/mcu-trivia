@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationBehaviorOptions, Router } from '@angular/router';
 import { delay, of, take, tap } from 'rxjs';
 
 import { NumberService } from './../../core/number.service';
-import { Router } from '@angular/router';
 import { TriviaQuestion } from '../../shared/interfaces/TriviaQuestion.interface';
 import { triviaQuestions } from '../../core/trivia-data.const';
 
@@ -42,7 +42,7 @@ export class TriviaPageComponent implements OnInit {
     }
 
     if (!areAvailableQuestions) {
-      this.router.navigate(['/game-over']);
+      this.router.navigateByUrl('/game-over');
     }
 
     this.currentQuestion = triviaQuestions[randomIndex];
@@ -50,7 +50,6 @@ export class TriviaPageComponent implements OnInit {
   }
 
   selectOption(index: number): void {
-
     this.anyOptionWasPressed = true;
     of('')
       .pipe(

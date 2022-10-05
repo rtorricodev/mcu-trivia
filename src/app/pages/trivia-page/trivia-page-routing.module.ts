@@ -8,10 +8,6 @@ const routes: Routes = [
     path: '',
     component: TriviaPageComponent
   },
-  {
-    path: '**',
-    component: TriviaPageComponent
-  }
 ];
 
 @NgModule({

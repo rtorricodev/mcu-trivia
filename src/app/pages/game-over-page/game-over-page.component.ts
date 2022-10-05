@@ -1,4 +1,6 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component } from '@angular/core';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-game-over-page',
@@ -17,5 +19,9 @@ import { Component } from '@angular/core';
   `,
 })
 export class GameOverPageComponent {
+  points: number = 0;
+
   constructor() {}
+
+ 
 }
