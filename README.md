@@ -1,27 +1,29 @@
 # McuTrivia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+##Previous Diagrams
 
-## Development server
+<img width="669" alt="Screen Shot 2022-10-05 at 12 10 22" src="https://user-images.githubusercontent.com/11529293/194109451-3554cba5-c5c5-42e6-b295-24b09d08e1a0.png">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+Deployed: [Deployed in Firebase hosting]: https://mcu-trivia-fad25.web.app/trivia
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Video Demo: [Loom video]: https://www.loom.com/share/41efde413d5f403f8b52ba4dfb09e2e9 
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular Cli: 14.2.1.
+- Node: 16.14.0
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run the project locally
 
-## Running end-to-end tests
+- ( Review node version, change it if needed )
+- npm install
+- ng serve
+- open browser in http://localhost:4200
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
