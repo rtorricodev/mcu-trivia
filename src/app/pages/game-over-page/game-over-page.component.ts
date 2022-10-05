@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       <h1 class="text-white text-bold text-5xl">Game Over</h1>
       <button
         [routerLink]="['./start']"
-        class="px-5 py-3 bg-blue-700 shadow-md rounded text-white mt-5"
+        class="px-5 py-3 bg-indigo-500 shadow-md rounded text-white mt-5"
       >
         Play again
       </button>

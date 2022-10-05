@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { GameOverPageComponent } from './pages/game-over-page/game-over-page.component';
 import { NgModule } from '@angular/core';
 import { StartPageComponent } from './pages/start-page/start-page.component';
-import { TriviaPageComponent } from './pages/trivia-page/trivia-page.component';
 
 const routes: Routes = [
   {
@@ -13,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: "trivia",
-    component: TriviaPageComponent,
+    loadChildren: () => import('./pages/trivia-page/trivia-page.module').then((m) => m.TriviaPageModule)
   },
   {
     path: "game-over",

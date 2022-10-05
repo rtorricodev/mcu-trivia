@@ -1,16 +1,7 @@
-<div
-  class="h-14 w-full fixed bg-gradient-to-t from-blue-700 to-violet-800 flex justify-between items-center"
->
-  <a [routerLink]="['/start']">
-    <h1 class="text-white text-bold text-xl ml-10">MCU Trivia</h1>
-  </a>
-  <div class="flex">
-    <p class="text-white mr-10 text-bold text-lg">
-      Questions: {{ availableQuestions }}
-    </p>
-    <p class="text-white mr-10 text-bold text-lg">Points: {{ points }}</p>
-  </div>
-</div>
+<app-trivia-header
+  [availableQuestions]="availableQuestions"
+  [points]="points"
+></app-trivia-header>
 
 <div class="w-full h-full flex justify-center bg-slate-100">
   <div class="w-10/12 h-screen flex flex-wrap justify-center mt-28">
@@ -31,7 +22,7 @@
           [option]="option"
           [correctAnswer]="currentQuestion.indexOfCorrectAnswer"
           [anyOptionWasPressed]="anyOptionWasPressed"
-          (clickedEvent)="selectOption($event)" 
+          (clickedEvent)="selectOption($event)"
         ></app-trivia-option>
       </ng-container>
     </div>

@@ -3,7 +3,7 @@ import { delay, of, take, tap } from 'rxjs';
 
 import { NumberService } from './../../core/number.service';
 import { Router } from '@angular/router';
-import { TriviaQuestion } from '../../shared/questions.interface';
+import { TriviaQuestion } from '../../shared/interfaces/questions.interface';
 import { triviaQuestions } from '../../core/trivia-data.const';
 
 @Component({
