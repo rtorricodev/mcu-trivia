@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { delay, of, tap } from 'rxjs';
+import { delay, of, take, tap } from 'rxjs';
 
 import { Router } from '@angular/router';
 import { TriviaQuestion } from './questions.interface';
-import  { triviaData } from './trivia-data.const';
+import { triviaData } from './trivia-data.const';
 
 @Component({
   selector: 'app-trivia-page',
   templateUrl: './trivia-page.component.html',
-  styleUrls: ['./trivia-page.component.scss']
+  styleUrls: ['./trivia-page.component.scss'],
 })
 export class TriviaPageComponent implements OnInit {
-
   triviaData: TriviaQuestion[] = triviaData;
   currentTriviaQuestion: TriviaQuestion = {} as TriviaQuestion;
   optionWasPressed: boolean = false;
   correctCounter: number = 0;
+  availableQuestions: number = this.triviaData.length;
   answeredQuestions: number[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.getRandomQuestion();
@@ -30,18 +30,19 @@ export class TriviaPageComponent implements OnInit {
 
   private getRandomQuestion(): void {
     let randomIndex: number = this.getRandomNumber();
-    const availableQuestions = this.answeredQuestions.length === triviaData.length;
+    const availableQuestions =
+      this.answeredQuestions.length === triviaData.length;
 
-
-
-    while(this.answeredQuestions.includes(randomIndex) && !availableQuestions ) {
-      randomIndex =  this.getRandomNumber();
-    };
-
-    if(availableQuestions ){
-      this.router.navigate(['/game-over']);
+    while (
+      this.answeredQuestions.includes(randomIndex) &&
+      !availableQuestions
+    ) {
+      randomIndex = this.getRandomNumber();
     }
 
+    if (availableQuestions) {
+      this.router.navigate(['/game-over']);
+    }
 
     this.currentTriviaQuestion = triviaData[randomIndex];
     this.answeredQuestions.push(randomIndex);
@@ -49,17 +50,19 @@ export class TriviaPageComponent implements OnInit {
 
   selectOption(index: number): void {
     this.optionWasPressed = true;
-    of('').pipe(
-      delay(1000),
-      tap(() => {
-        if( index === this.currentTriviaQuestion.indexOfCorrectAnswer) {
-          this.correctCounter += 1;
-        }
-        this.getRandomQuestion()
-        this.optionWasPressed = false;
-      }),
-    ).subscribe();
-
-  } 
-
+    of('')
+      .pipe(
+        delay(1000),
+        tap(() => {
+          if (index === this.currentTriviaQuestion.indexOfCorrectAnswer) {
+            this.correctCounter += 1;
+          }
+          this.availableQuestions -= 1;
+          this.getRandomQuestion();
+          this.optionWasPressed = false;
+        }),
+        take(1),
+      )
+      .subscribe();
+  }
 }
