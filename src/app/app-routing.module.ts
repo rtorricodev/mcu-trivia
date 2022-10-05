@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { GameOverPageComponent } from './game-over-page/game-over-page.component';
 import { NgModule } from '@angular/core';
 import { StartPageComponent } from './start-page/start-page.component';
 import { TriviaPageComponent } from './trivia-page/trivia-page.component';
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: "trivia",
     component: TriviaPageComponent,
+  },
+  {
+    path: "game-over",
+    component: GameOverPageComponent
   },
   {
     path: "**",

@@ -2,9 +2,7 @@
   class="h-14 w-full fixed bg-gradient-to-t from-blue-700 to-violet-800 flex justify-between items-center"
 >
   <h1 class="text-white text-bold text-xl ml-10">MCU Trivia</h1>
-  <p class="text-white mr-10 text-bold text-lg">
-    Poinst: {{correctCounter}}
-  </p>
+  <p class="text-white mr-10 text-bold text-lg">Poinst: {{ correctCounter }}</p>
 </div>
 
 <div class="w-full h-full flex justify-center bg-slate-100">
@@ -23,8 +21,12 @@
       >
         <button
           [ngClass]="{
-            'bg-lime-600': currentTriviaQuestion.indexOfCorrectAnswer === i && optionWasPressed,
-            'bg-red-500' : currentTriviaQuestion.indexOfCorrectAnswer !== i && optionWasPressed
+            'bg-green-600':
+              currentTriviaQuestion.indexOfCorrectAnswer === i &&
+              optionWasPressed,
+            'bg-red-600':
+              currentTriviaQuestion.indexOfCorrectAnswer !== i &&
+              optionWasPressed
           }"
           (click)="selectOption(i)"
           class="w-full py-3 bg-violet-600 rounded mt-3 mb-3 text-white"
